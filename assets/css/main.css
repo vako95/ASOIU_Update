@@ -37,6 +37,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    margin-bottom: 48px;
     overflow: hidden;
 }
 
@@ -765,6 +766,16 @@ body {
     color: #FDFDFD;
 }
 
+.header__heading-left-center {
+    top: 50%;
+    right: unset;
+    bottom: unset;
+    left: 0px;
+    align-items: flex-start;
+    transform: translateY(-50%);
+    padding: 48px 80px;
+}
+
 .header__heading-left-bottom {
     top: unset;
     right: unset;
@@ -785,6 +796,20 @@ body {
     padding: 0px 80px;
 }
 
+.header__heading-link-btn {
+    background-color: #0055CC;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 16px 48px;
+    transition: background-color 160ms linear;
+}
+
+.header__heading-link-btn:hover {
+    background-color: #003073;
+}
+
 .header__heading-content {
     display: flex;
     flex-direction: row;
@@ -792,8 +817,12 @@ body {
     align-items: center;
 }
 
+.header__heading-title--separation {
+    width: 444px;
+}
+
 .header__heading-description--separation {
-    max-width: 480px;
+    width: 444px;
     font-size: 32px;
     line-height: 34px;
     text-align: left;
@@ -803,7 +832,10 @@ body {
     width: 1px;
     height: 192px;
     background-color: #FFFFFF;
-    margin-right: 90px;
+}
+
+.header__heading-description--left {
+    text-align: left;
 }
 
 .main {
@@ -831,59 +863,6 @@ body {
 .section__fluid {
     padding: 64px 0px;
 }
-
-/* .section__heading {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
- */
-/* .section__title {
-    text-align: center;
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 64px;
-    color: #000000;
-    margin-bottom: 24px;
-}
-
-.section__description {
-    text-align: center;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 34px;
-    color: #000000;
-    margin-bottom: 24px;
-}
-
-.section__link {
-    border: 1px solid #98A2B3;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 34px;
-    color: #98A2B3;
-    padding: 14px 24px;
-    transition: background-color 160ms linear, color 160ms linear;
-} */
-
-/* .section__link:hover {
-    background-color: #98A2B3;
-    color: #FFFFFF;
-}
- */
-
-
-
-
-
-
-
-
-
 
 .login__section {
     width: 100%;
@@ -1005,42 +984,6 @@ body {
     display: flex;
     color: #D0D5DD;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .section__faculty-specializations-heading {
     width: 100%;
@@ -1232,18 +1175,6 @@ body {
     color: inherit;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .section__faculty-curriculum-heading {
     width: 100%;
     height: auto;
@@ -1317,25 +1248,6 @@ body {
 .faculty-curriculum__link:hover {
     color: #B53471;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .section__faculty-departments-heading {
     width: 100%;
@@ -1429,11 +1341,6 @@ body {
     line-height: 26px;
     color: inherit;
 }
-
-
-
-
-
 
 .section__faculty-laboratory-heading {
     width: 100%;
@@ -1532,112 +1439,6 @@ body {
     object-position: center center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .section__projects-heading {
     width: 100%;
     height: auto;
@@ -1684,7 +1485,6 @@ body {
     align-items: flex-start;
 }
 
-
 .project__carousel-item {
     width: 100%;
     height: auto;
@@ -1702,33 +1502,6 @@ body {
     object-fit: contain;
     object-position: center center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .section__history-heading {
     width: 100%;
@@ -1748,7 +1521,7 @@ body {
     margin-bottom: 24px;
 }
 
-.section__history-heading-date {
+.faculty-laboratory__gallery-iteme {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -1812,32 +1585,6 @@ body {
     color: inherit;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .history__seemore-title {
     font-size: 28px;
     font-family: 'DM Sans';
@@ -1851,71 +1598,6 @@ body {
 .history__seemore-title {
     text-decoration: underline;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .section__partners-heading {
     width: 100%;
@@ -1981,24 +1663,6 @@ body {
     object-position: center center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .faq__list {
     width: 100%;
     height: auto;
@@ -2039,7 +1703,6 @@ body {
     padding-right: 32px;
 }
 
-
 .faq__answer-list {
     width: 100%;
     height: auto;
@@ -2055,8 +1718,6 @@ body {
     font-weight: 500;
     color: #353535;
     margin-right: 4px;
-
-
 }
 
 .faq__answer-list-item-description {
@@ -2074,7 +1735,6 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
 }
-
 
 .faq__question>i {
     display: flex;
@@ -2101,51 +1761,6 @@ body {
     line-height: 40px;
     color: #464646;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .section__profession-heading {
     width: 100%;
@@ -2276,33 +1891,6 @@ body {
     transform: translateX(4px);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .section__conferences-heading {
     width: 100%;
     height: auto;
@@ -2372,47 +1960,6 @@ body {
     text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .section__recent-posts-heading {
     width: 100%;
     height: auto;
@@ -2476,9 +2023,9 @@ body {
 
 .recent-post__link {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 26px;
     font-weight: 500;
-    line-height: 32px;
+    line-height: 40px;
     color: #292929;
     margin-bottom: 12px;
     transition: color 160ms linear;
@@ -2487,6 +2034,7 @@ body {
 .recent-post__link:hover {
     color: #1570EF;
 }
+
 
 .recent-post__time {
     font-size: 14px;
@@ -2520,31 +2068,6 @@ body {
     object-fit: cover;
     object-position: center center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .section__teachers-heading {
     width: 100%;
@@ -3305,12 +2828,25 @@ body {
     /* Styles for the form container */
 }
 
-.form-row {
-    /* Styles for form row */
+.file-upload-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 
-.form-group {
-    /* Styles for form group */
+.file-upload-button>img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.file-upload-input {
+    display: none;
 }
 
 
@@ -3797,7 +3333,7 @@ body {
 
 .faculty__poster {
     width: 100%;
-    height: 304px;
+    height: 384px;
     border-radius: 2px;
     overflow: hidden;
 }
@@ -3816,7 +3352,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-right: 80px;
 }
 
 .faculty__title {
@@ -4249,6 +3784,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: #101828;
+    margin-top: 48px;
     overflow: hidden;
 }
 
@@ -4337,14 +3873,6 @@ body {
 
 .footer__section-icon-link:not(:last-of-type)>i {
     margin-right: 12px;
-}
-
-.footer__nav-link-name {
-
-    font-family: "DM Sans";
-    font-size: 16px;
-    font-weight: 400;
-
 }
 
 .footer__nav {
@@ -5102,6 +4630,11 @@ body {
     align-items: flex-start;
 }
 
+.act-hall__reservation>form {
+    width: 100%;
+    height: auto;
+}
+
 .act-hall__reservation-heading {
     margin-bottom: 32px;
 }
@@ -5116,14 +4649,28 @@ body {
 .reservation__container {
     width: 100%;
     height: auto;
-    display: flex;
+    display: grid;
     flex-direction: column;
-    align-items: center;
+    justify-items: center;
+    align-content: center;
     background-color: #1A2232;
-    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.reservation__container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.reservation__container::-webkit-scrollbar-thumb {
+    background-color: #909090;
+}
+
+.reservation__container::-webkit-scrollbar-track {
+    background-color: #D9D9D9;
 }
 
 .reservation__table-wrapper {
+    min-width: 654px;
     margin: 20px;
 }
 
@@ -6021,16 +5568,11 @@ body {
     margin-bottom: 10px;
 }
 
-.apply__heading-certificate-item-title {
+.apply__heading-certificate-item>.apply__heading-certificate-item-title:not(:last-of-type) {
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
     color: #353535;
-    margin-bottom: 12px;
-}
-
-.apply__heading-certificate-item>.apply__heading-certificate-item-title:not(:last-of-type) {
-
     margin-bottom: 12px;
 }
 
@@ -6457,6 +5999,22 @@ body {
 }
 
 .digital__development::-webkit-scrollbar-track {
+    background-color: #D9D9D9;
+    border-radius: 8px;
+}
+
+
+.digital__development-transition::-webkit-scrollbar {
+    height: 4px;
+    border-radius: 8px;
+}
+
+.digital__development-transition::-webkit-scrollbar-thumb {
+    background-color: #909090;
+    border-radius: 8px;
+}
+
+.digital__development-transition::-webkit-scrollbar-track {
     background-color: #D9D9D9;
     border-radius: 8px;
 }
@@ -6897,7 +6455,6 @@ body {
 
 .digital__development-library-information-item-link {
     font-size: 18px;
-    font-family: DM Sans;
     font-weight: 500;
     text-decoration: none;
     color: #353535;
@@ -6906,16 +6463,14 @@ body {
 
 .digital__development-library-information-item-link:hover {
     font-size: 18px;
-    font-family: DM Sans;
     font-weight: 500;
     color: #1570EF;
 }
-.digital__development-library-information-item-title{
-    font-family: "DM Sans";
+
+.digital__development-library-information-item-title {
     font-size: 16px;
     line-height: 32px;
     font-weight: 500;
-    
 }
 
 .digital__development-library-information-item-link.digital__development-library-information-item-title {
@@ -7074,6 +6629,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    list-style-type: disc;
 }
 
 .management__office-main-list {
@@ -7320,7 +6876,7 @@ body {
     align-items: flex-start;
 }
 
-/* .digital__development-transition {
+.digital__development-transition {
     width: 100%;
     height: auto;
     display: flex;
@@ -7330,7 +6886,7 @@ body {
     position: relative;
     margin: 22px 0;
 
-} */
+}
 
 .digital__development-transition-links {
     font-size: 16px;
@@ -7356,10 +6912,6 @@ body {
     font-weight: 500;
     color: #1570EF;
 }
-
-
-
-
 
 
 .summer__school-academic {
@@ -7507,6 +7059,8 @@ body {
     font-weight: 400;
     color: #0055CC;
 }
+
+
 
 
 
@@ -7960,7 +7514,7 @@ body {
 
 
 
-/* .digital__development-transition {
+.digital__development-transition {
     width: 100%;
     height: auto;
     display: flex;
@@ -7970,7 +7524,7 @@ body {
     position: relative;
     margin: 22px 0;
 
-} */
+}
 
 .digital__development-transition-links {
     font-size: 16px;
@@ -8077,7 +7631,7 @@ body {
     align-items: flex-start;
 }
 
-/* .digital__development-transition {
+.digital__development-transition {
     width: 100%;
     height: auto;
     display: flex;
@@ -8087,7 +7641,7 @@ body {
     position: relative;
     margin: 22px 0;
 
-} */
+}
 
 .digital__development-transition-links {
     font-size: 16px;
@@ -8226,89 +7780,8 @@ body {
     /*     .header__navbar {
         padding-left: 96px;
     } */
-    /* .latest-news__detail-description {
-        font-size: 20px;
-        line-height: 28px;
-    }
-
-    .section__recent-posts-heading-title {
-
-        font-size: 48px;
-    }
-
-    .faq__question-text {
-        font-size: 32px;
-    }
-
-    .faq__answer-text {
-        font-size: 22px;
-    }
-
-    .section__partners-heading-title {
-        font-size: 48px;
-    }
-
-    .partner__link {
-        width: 100px;
-    }
-
-    .footer__nav-link {
-
-        font-size: 22px;
-    }
-
-    .latest-news__detail-description {
-        font-size: 18px;
-        line-height: 28px;
-    }
-
-    .section__profession-heading-title {
-
-        font-size: 48px;
-    }
-
-    .section__recent-posts-heading-link {
-        font-size: 26px;
-        line-height: 32px;
-    }
-
-    .recent-post__link {
-        font-size: 26px;
-        line-height: 36px;
-    }
-
-    .recent-post__description {
-        font-size: 22px;
-    }
-
-    .recent-post__time {
-        font-size: 22px;
-    }
-
-    .recent-post__description {
-        font-size: 24px;
-        line-height: 38px;
-    }
-
-    .navbar__logo {
-        width: 198px;
-        height: 34px;
-        margin-left: 20px;
-    }
-
-    .section {
-        padding: 48px 24px;
-    }
-
-    .navbar__menu {
-        padding: 48px 24px;
-    } */
 
 
-
-    /* INDEX HTML */
-
-    /* INDEX HTML */
 }
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
@@ -8358,6 +7831,22 @@ body {
         line-height: 82px;
     }
 
+    .header__heading-title .header__heading-title--separation {
+        margin-bottom: 0px;
+    }
+
+    .header__heading-vertical-separator {
+        display: none;
+    }
+
+    .header__heading-content {
+        display: none;
+    }
+
+    .header__heading-separation {
+        justify-content: center;
+    }
+
     .header__heading-description {
         font-size: 28px;
         line-height: 48px;
@@ -8384,10 +7873,7 @@ body {
         line-height: 52px;
     }
 
-    .recent-post__link {
-        font-size: 26px;
-        line-height: 40px;
-    }
+   
 
     .recent-post__description {
         font-size: 22px;
@@ -8437,6 +7923,14 @@ body {
     .section__projects-heading-title {
         font-size: 48px;
         line-height: 52px;
+    }
+
+    .section__act-hall {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation__container {
+        order: -1;
     }
 
     /* 
@@ -8541,11 +8035,31 @@ body {
         display: grid;
         grid-template-columns: repeat(2, auto);
     }
-}
 
+    .footer__copyright {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
 
+    .header__heading-title .header__heading-title--separation {
+        margin-bottom: 0px;
+    }
+
+    .header__heading-vertical-separator {
+        display: none;
+    }
+
+    .header__heading-content {
+        display: none;
+    }
+
+    .header__heading-separation {
+        justify-content: center;
+    }
 
     /*     .header__navbar {
         padding-left: 24px;
@@ -8566,6 +8080,14 @@ body {
     .faculty__item {
         grid-template-columns: repeat(1, 1fr);
         gap: 64px;
+    }
+
+    .section__act-hall {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation__container {
+        order: -1;
     }
 
 
@@ -8617,13 +8139,7 @@ body {
         line-height: 28px;
     }
 
-    .recent-post__link {
-        text-decoration: none;
-        font-size: 22px;
-        font-weight: 500;
-        line-height: 38px;
-        margin-bottom: 22px;
-    }
+  
 
     .section__latest-news-title {
         font-size: 42px;
@@ -8772,6 +8288,11 @@ body {
         font-size: 18px;
     }
 
+    .footer__copyright {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     /*     .header__navbar {
         padding-left: 24px;
     } */
@@ -8794,10 +8315,25 @@ body {
 
 @media screen and (max-width: 767px) and (min-width: 576px) {
 
-
     /*     .header__navbar {
         padding-left: 12px;
     } */
+
+    .header__heading-title .header__heading-title--separation {
+        margin-bottom: 0px;
+    }
+
+    .header__heading-vertical-separator {
+        display: none;
+    }
+
+    .header__heading-content {
+        display: none;
+    }
+
+    .header__heading-separation {
+        justify-content: center;
+    }
 
     .navbar__logo {
         margin-left: 16px;
@@ -8836,6 +8372,14 @@ body {
     .summer__carousel-item.half {
         width: 100%;
         height: 362px;
+    }
+
+    .section__act-hall {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation__container {
+        order: -1;
     }
 
 
@@ -9023,18 +8567,9 @@ body {
         gap: 48px;
     }
 
-    .footer__partners {
-        width: 100%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: flex-start;
-    }
-
     .footer__copyright {
-
         flex-direction: column;
+        align-items: flex-start;
     }
 
     .footer__section-logo {
@@ -9080,28 +8615,30 @@ body {
     }
 
     .student__committee-main {
-  
+
         grid-template-columns: 1fr;
-    
+
     }
 
 }
 
-/* @media screen and (min-width: 575px){
-    .menu__container{
-        display: flex;
+@media screen and (max-width: 575px) {
+
+    .header__heading-title .header__heading-title--separation {
+        margin-bottom: 0px;
     }
 
-    .menu__quick-links{
-        display: flex;
-    }
-
-    .menu-mobile__container{
+    .header__heading-vertical-separator {
         display: none;
     }
-} */
 
-@media screen and (max-width: 575px) {
+    .header__heading-content {
+        display: none;
+    }
+
+    .header__heading-separation {
+        justify-content: center;
+    }
 
     /*     .header__navbar {
         padding-left: 12px;
@@ -9147,16 +8684,14 @@ body {
         display: flex;
     }
 
+    .section__act-hall {
+        grid-template-columns: 1fr;
+    }
 
+    .reservation__container {
+        order: -1;
+    }
 
-    /* NAv Title */
-
-
-    /* NAv Title */
-
-    /*     .header__navbar {
-        padding-left: 12px;
-    } */
     .section__recent-posts-heading {
         align-items: flex-start;
         flex-direction: column;
@@ -9284,6 +8819,7 @@ body {
 
     .footer__copyright {
         flex-direction: column;
+        align-items: flex-start;
     }
 
     .footer__partners {
@@ -9437,7 +8973,7 @@ body {
         font-size: 18px;
         line-height: 38px;
     }
-    
+
 
 
     /* LIBRARY */
@@ -9526,8 +9062,14 @@ body {
 
     /* ERROR_404 */
 
+    .section__register-page {
 
+        grid-template-columns: 1fr;
+    }
 
+    .section__register-quick-transition {
+        order: -1;
+    }
 
 
     /* ERROR_402 */
@@ -9607,11 +9149,9 @@ body {
     }
 
     .faculty-department__poster {
-        height: 255px;
+        height: 256px;
     }
 
-
-    /* Faculties */
     .faculty-curriculum__item {
 
         flex-direction: column;
@@ -9640,37 +9180,24 @@ body {
         gap: 24px;
     }
 
-    /* Facultie */
+    .section__grow {
+        grid-template-columns: 1fr;
+    }
 
-
-
-
-
-
-    /* NEWS */
     .news {
         grid-template-columns: 1fr;
     }
 
-    /* NEWS */
-
-    /* project_management_office */
     .management__office-section {
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
-    /* project_management_office */
-
-
-
-    /* student_scientific_society */
     .summer__school-academic-heading-title {
         font-size: 32px;
         line-height: 42px;
     }
 
-    /* student_scientific_society */
     .student__committee-main-poster {
         width: 100%;
         height: auto;
@@ -9687,15 +9214,11 @@ body {
         height: 384px;
     }
 
-    /* asoiu_summer_school_about_us */
-
     .about__video-youtube {
         width: 100%;
         height: 100%;
     }
 
-
-    /* asoiu_summer_school_about_us */
     .campus__gallery-images {
         grid-template-columns: 1fr;
     }
