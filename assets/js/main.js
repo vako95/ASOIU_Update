@@ -1,4 +1,116 @@
+$(document).ready(function(){
+    /***************** NAVBAR SEARCH & MENU BUTTONS - BEGIN *****************/
+    /***************** NAVBAR SEARCH & MENU BUTTONS - ENDED *****************/
+
+    /***************** NAVBAR MENU LOGICS - BEGIN *****************/
+    /***************** NAVBAR MENU LOGICS - ENDED *****************/
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function () {
+    // Скрываем все подменю по умолчанию
+    $('.menu-mobile__dropdown-list').hide();
+
+    // Инициализация активных меню при загрузке страницы
+    $('.menu-mobile__link.active').each(function () {
+        var $submenu = $(this).next('.menu-mobile__dropdown-list');
+
+        // Открываем текущее подменю, если оно существует
+        if ($submenu.length) {
+            $submenu.show(); // Открываем подменю без анимации
+        }
+
+        // Раскрываем все родительские подменю, если это вложенное меню
+        $(this).parents('.menu-mobile__dropdown-list').show(); // Открываем все родительские подменю
+    });
+
+    // Обработчик клика по элементу с подменю
+    $('.menu-mobile__item > a').on('click', function (e) {
+        e.preventDefault();
+
+        // Получаем текущее подменю
+        var $submenu = $(this).next('.menu-mobile__dropdown-list');
+        var $icon = $(this).find('i'); // Иконка внутри ссылки
+        var $currentLink = $(this); // Текущий элемент Link (a)
+
+        // Если текущий элемент - верхнего уровня (нет родительского dropdown-list)
+        if (!$(this).parents('.menu-mobile__dropdown-list').length) {
+            // Закрываем все подменю верхнего уровня, кроме того, на которое кликаем
+            $('.menu-mobile__dropdown-list').not($submenu).slideUp(160);
+            $('.menu-mobile__link > i').not($icon).css('transform', 'rotate(0deg)'); // Возвращаем другие иконки в исходное положение
+
+            // Удаляем класс active со всех ссылок верхнего уровня
+            $('.menu-mobile__link').removeClass('active');
+        }
+
+        // Показать или скрыть текущее подменю
+        if ($submenu.length) {
+            // Если подменю открыто, закрываем его и все вложенные подменю
+            if ($submenu.is(':visible')) {
+                $submenu.find('.menu-mobile__dropdown-list').slideUp(160); // Закрываем все вложенные подменю
+                // Убираем класс active у всех вложенных ссылок
+                $submenu.find('.menu-mobile__link').removeClass('active');
+            }
+
+            // Показать или скрыть текущее подменю
+            $submenu.slideToggle(160);
+
+            // Добавляем/удаляем класс active для текущего элемента Link
+            $currentLink.toggleClass('active');
+
+            // Проверяем текущее состояние иконки и изменяем угол поворота
+            if ($icon.css('transform') === 'none' || $icon.css('transform') === 'matrix(1, 0, 0, 1, 0, 0)') {
+                $icon.css({
+                    'transform': 'rotate(-180deg)',
+                    'transition': 'transform 0.3s ease'
+                });
+            } else {
+                $icon.css({
+                    'transform': 'rotate(0deg)',
+                    'transition': 'transform 0.3s ease'
+                });
+            }
+        }
+    });
+});
+
+
+
+
+
+
+
+
+$(document).ready(function () {
+
+
+
+
+
+
+
+
+
+
+
+
+
     /***************** NAVBAR SEARCH & MENU BUTTONS - START *****************/
     var $searchButton = $("#navbar_search_btn");
     var $inputContainer = $("#navbar_search_input_container");
@@ -158,43 +270,63 @@ $(document).ready(function () {
 
 
 
-
     /***************** NAVBAR MENU LOGICS - START *****************/
-    $("#menu").on("click", "a[data-dropdown-observed]", function (event) {
-        event.preventDefault();
-        var $this = $(this);
-        var targetId = $this.data("dropdown-observed");
-        var $dropdown = $("#" + targetId);
-        // Удаляем класс active со всех элементов
-        $(".menu a").removeClass("active");
-
-        if ($dropdown.is(":visible")) {
-            $dropdown.hide();
-            $this.removeClass("active"); // Убираем класс active при повторном нажатии
-        } else {
-            $(".menu__dropdown").hide();
-            $(".menu__dropdown-list ul").hide();
-            $dropdown.show();
-            $this.addClass("active"); // Добавляем класс active
-        }
+    $(document).ready(function () {
+        // Инициализация активных меню при загрузке страницы
+        $(".menu__link.active, .menu__dropdown-link.active").each(function () {
+            var $this = $(this);
+            var targetId = $this.data("dropdown-observed");
+            var $dropdown = $("#" + targetId);
+    
+            // Если есть вложенное меню, показываем его
+            if ($dropdown.length) {
+                $dropdown.show(); // Открываем меню
+            }
+    
+            // Открываем все родительские dropdown, если это вложенный элемент
+            $this.parents('.menu__dropdown').show();
+        });
+    
+        // Обработчик клика по элементам с data-dropdown-observed
+        $("#menu").on("click", "a[data-dropdown-observed]", function (event) {
+            event.preventDefault();
+            var $this = $(this);
+            var targetId = $this.data("dropdown-observed");
+            var $dropdown = $("#" + targetId);
+            
+            // Удаляем класс active со всех элементов
+            $(".menu a").removeClass("active");
+    
+            if ($dropdown.is(":visible")) {
+                $dropdown.hide();
+                $this.removeClass("active"); // Убираем класс active при повторном нажатии
+            } else {
+                $(".menu__dropdown").hide();
+                $(".menu__dropdown-list ul").hide();
+                $dropdown.show();
+                $this.addClass("active"); // Добавляем класс active
+            }
+        });
+    
+        $(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function (event) {
+            event.preventDefault();
+            var $this = $(this);
+            var targetId = $this.data("dropdown-observed");
+            var $dropdown = $("#" + targetId);
+    
+            // Удаляем класс active со всех ссылок
+            $(".menu__dropdown-link").removeClass("active");
+    
+            if ($dropdown.is(":visible")) {
+                $dropdown.hide();
+                $this.removeClass("active"); // Убираем класс active при повторном нажатии
+            } else {
+                $dropdown.show();
+                $this.addClass("active"); // Добавляем класс active
+            }
+        });
     });
-
-    $(".menu").on("click", ".menu__dropdown-link[data-dropdown-observed]", function (event) {
-        event.preventDefault();
-        var $this = $(this);
-        var targetId = $this.data("dropdown-observed");
-        var $dropdown = $("#" + targetId);
-        // Удаляем класс active со всех ссылок
-        $(".menu__dropdown-link").removeClass("active");
-
-        if ($dropdown.is(":visible")) {
-            $dropdown.hide();
-            $this.removeClass("active"); // Убираем класс active при повторном нажатии
-        } else {
-            $dropdown.show();
-            $this.addClass("active"); // Добавляем класс active
-        }
-    });
+    
 
     /***************** NAVBAR MENU LOGICS - ENDED *****************/
 
@@ -389,53 +521,76 @@ $(document).ready(function () {
     /***************** FAQ DROPDOWN - ENDED *****************/
 
 
-    // Размер таблицы
-    const rows = 16;
-    const cols = 16;
+    
+});
 
-    // Создаем таблицу
-    for (let i = 0; i <= rows; i++) {
+
+
+
+
+
+$(document).ready(function() {
+    const rows = parseInt($('#reservation_table').data('rows-count'));
+    const cols = parseInt($('#reservation_table').data('column-count'));
+    const filledData = $('#reservation_table').data('filled');
+
+    // Если data-filled не задан, используем пустой массив
+    const filledCells = filledData ? filledData.split(',') : [];
+
+    const tbody = $('<tbody></tbody>');
+    $('#reservation_table').append(tbody);
+
+    for (let i = 1; i <= rows; i++) {
         let row = '<tr>';
-        for (let j = 0; j <= cols; j++) {
-            if (i === 0 && j === 0) {
-                // Верхний левый угол, пустой
-                row += '<th></th>';
-            } else if (i === 0) {
-                // Верхние цифры (номера колонок)
-                row += `<th class="col-header">${j}</th>`;
-            } else if (j === 0) {
-                // Левые цифры (номера рядов)
-                row += `<th class="row-header">${i}</th>`;
-            } else {
-                // Заполняем ячейки цифрами от 1 до 16 и добавляем класс "filled" или "empty"
-                let cellClass = (Math.random() > 0.7) ? 'filled' : 'empty'; // Рандомно выбираем занятость
-                let cellContent = cellClass === 'filled' ? '<i class="ri-close-circle-fill"></i>' : j; // Иконка для занятых мест
-                row += `<td class="${cellClass}" data-row="${i}" data-col="${j}">${cellContent}</td>`;
-            }
+        for (let j = 1; j <= cols; j++) {
+            const cellId = `${i}-${j}`;
+            const isFilled = filledCells.includes(cellId);
+            const cellClass = isFilled ? 'filled' : 'empty';
+            const cellContent = isFilled ? '<div class="reservation__filled-cell"><i class="ri-close-large-fill"></i></div>' : j;
+
+            row += `<td class="${cellClass}" data-rows="${i}" data-columns="${j}" data-fill="${cellClass}" data-cell="${cellId}">${cellContent}</td>`;
         }
+        row += `<td class="row-number">${i}</td>`;
         row += '</tr>';
-        $('#reservationTable').append(row);
+        tbody.append(row);
     }
 
-    // Клик по ячейке
-    $('#reservationTable').on('click', 'td', function () {
-        // Проверяем, занята ли ячейка
+    // Устанавливаем класс в зависимости от состояния таблицы
+    $('#reservation_table').addClass(filledCells.length > 0 ? 'filled' : 'empty');
+
+    $('#reservation_table').on('click', 'td:not(.row-number)', function () {
         if ($(this).hasClass('filled')) {
-            return; // Если занята, ничего не делаем
+            return; // Если ячейка занята, ничего не делаем
         }
 
-        // Если ячейка не занята, сбрасываем выделение с других ячеек
-        $('#reservationTable td.selected').removeClass('selected');
+        // Если ячейка уже выделена, убираем выделение
+        if ($(this).hasClass('selected')) {
+            $(this).removeClass('selected');
+            $('#reservation_selected_cell').val(''); // Очищаем значение в скрытом инпуте
+        } else {
+            // Сброс выделения всех ячеек
+            $('#reservation_table td.selected').removeClass('selected');
 
-        // Устанавливаем новую выбранную ячейку
-        $(this).addClass('selected');
-
-        // Обновляем скрытый инпут значением выбранной ячейки
-        let row = $(this).data('row');
-        let col = $(this).data('col');
-        $('#selectedCell').val(`${row}-${col}`);
+            // Выделяем новую ячейку
+            $(this).addClass('selected');
+            let row = $(this).data('rows');
+            let col = $(this).data('columns');
+            $('#reservation_selected_cell').val(`${row}-${col}`); // Устанавливаем значение в скрытый инпут
+        }
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
 
 new WOW().init(); // not if
 Fancybox.bind("[data-fancybox='laboratory']"); // not if
@@ -483,6 +638,14 @@ $('.teacher__modal').on('click', function (event) {
 });
 
 
+
+
+
+
+
+
+
+//Vaqif
 // OPEn DROp down bezpantovo
 
 $(document).ready(function () {
