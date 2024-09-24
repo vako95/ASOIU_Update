@@ -2023,9 +2023,9 @@ body {
 
 .recent-post__link {
     text-decoration: none;
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 40px;
+    line-height: 38px;
     color: #292929;
     margin-bottom: 12px;
     transition: color 160ms linear;
@@ -2349,7 +2349,7 @@ body {
 
 .section__latest-news-title {
     font-family: "Playfair Display", serif;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 500;
 }
 
@@ -2881,7 +2881,7 @@ body {
     font-weight: 600;
     line-height: 42px;
     color: #2D2D2D;
-    margin-bottom: 12px;
+    margin-bottom: 18px;
 }
 
 .section__clubs-description {
@@ -3068,7 +3068,7 @@ body {
 .faculty__description {
     font-size: 18px;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 28px;
     margin-bottom: 16px;
 }
 
@@ -4327,7 +4327,7 @@ body {
 }
 
 .section__video-text-title {
-    font-size: 28px;
+    font-size: 36px;
     font-family: "DM Sans";
     font-weight: 500;
     color: #292929;
@@ -4639,8 +4639,9 @@ body {
 
 .digital__development-heading-title {
     font-family: "Playfair Display";
-    font-size: 32px;
+    font-size: 38px;
     font-weight: 500;
+    line-height: 52px;
     color: #1C1C1C;
     margin-bottom: 32px;
 }
@@ -4682,6 +4683,7 @@ body {
     color: #353535;
     margin: 14px 0;
 }
+
 .digital__development-icon-link {
     width: 100%;
     height: auto;
@@ -4829,6 +4831,7 @@ body {
     align-items: flex-start;
     padding-bottom: 0px 50px;
 }
+
 .digital__development-transition {
     width: 100%;
     height: auto;
@@ -5012,7 +5015,7 @@ body {
     align-items: flex-start;
     border-bottom: 1px solid #D7D7D7;
     list-style-type: none;
-    padding: 14px 0;  
+    padding: 14px 0;
     /* ???PADDING */
 }
 
@@ -5045,7 +5048,7 @@ body {
     height: auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    gap:48px;
+    gap: 48px;
 }
 
 .management__office-article {
@@ -5179,6 +5182,7 @@ body {
     color: #292929;
     margin-bottom: 16px;
 }
+
 .news__heading-time {
     font-family: "DM Sans";
     display: flex;
@@ -5344,6 +5348,7 @@ body {
 .summer__school-academic-heading-title {
     font-family: "Playfair Display";
     font-size: 32px;
+    line-height: 48px;
     font-weight: 500;
     color: #000000;
 }
@@ -5399,6 +5404,7 @@ body {
     grid-template-columns: 2fr 2fr;
     gap: 20px;
 }
+
 .student__committee-main-poster {
     width: 100%;
     height: auto;
@@ -5421,39 +5427,9 @@ body {
 }
 
 
-@media screen and (min-width: 1200px) {
-
-
-    /*     .header__navbar {
-        padding-left: 96px;
-    } */
-
-
-}
+@media screen and (min-width: 1200px) {}
 
 @media screen and (max-width: 1199px) and (min-width: 992px) {
-
-
-    /*     .header__navbar {
-        padding-left: 48px;
-    } */
-
-
-    /* .section{
-
-        padding: 24px 40px;
-        /* padding: 48px 80px;
-        padding:24px 40px;
-        padding:12px 20px;
-        padding 6px 10px */
-    /* }  */
-    /* .navbar__menu{
-        margia-left
-    }
-	
-	.navbar__logo{
-       margin-left: ;
-    } */
 
     .navbar__logo {
         width: 212px;
@@ -5469,10 +5445,6 @@ body {
         padding: 44px 20px;
     }
 
-
-
-
-    /* INDEX HTML */
     .header__heading-title {
         font-size: 56px;
         line-height: 82px;
@@ -5504,71 +5476,27 @@ body {
         margin-bottom: 22px;
     }
 
-    .latest-news__detail-title {
-        font-size: 24px;
-        line-height: 38px;
-        margin-bottom: 14px;
-    }
-
     .latest-news__detail-description {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 34px;
     }
 
     .section__recent-posts-heading-title {
-        font-size: 48px;
         line-height: 52px;
     }
 
-
-
     .recent-post__description {
-        font-size: 22px;
+        font-size: 18px;
         line-height: 32px;
-        margin-bottom: 22px;
     }
 
     .recent-post__time {
-        font-size: 22px;
+        font-size: 18px;
         line-height: 28px;
 
     }
 
     .section__profession-heading-title {
-        font-size: 48px;
-        line-height: 52px;
-    }
-
-    .profession__detail-title {
-        font-size: 42px;
-        margin-bottom: 24px;
-    }
-
-    .profession__detail-link>i {
-        font-size: 38px;
-    }
-
-    .profession__detail-link-name {
-        font-size: 26px;
-    }
-
-    .faq__question-text {
-        font-size: 38px;
-        line-height: 48px;
-    }
-
-    .faq__answer-text {
-        font-size: 26px;
-        line-height: 48px;
-    }
-
-    .section__partners-heading-title {
-        font-size: 48px;
-        line-height: 52px;
-    }
-
-    .section__projects-heading-title {
-        font-size: 48px;
         line-height: 52px;
     }
 
@@ -5580,44 +5508,6 @@ body {
         order: -1;
     }
 
-    /* 
-    .footer__section-logo {
-        width: 168px;
-        height: 40px;
-
-    }
-
-    .footer__section-icon-link>i {
-        font-size: 18px;
-    }
-
-    .footer__nav-link>i {
-        font-size: 18px;
-    }
-
-    .footer__section-about-text {
-        font-size: 16px;
-        line-height: 34px;
-    }
-
-    .footer__nav-section-title {
-        font-size: 22px;
-
-    }
-
-    .footer__nav-link {
-
-        font-size: 18px;
-    } */
-
-    /* INDEX HTML */
-
-
-    .section__latest-news-title {
-        font-size: 48px;
-    }
-
-    /* index */
     .menu__quick-links {
         flex-direction: column;
     }
@@ -5628,7 +5518,6 @@ body {
     }
 
     .quick-links__heading {
-
         margin-bottom: 16px;
         margin-right: unset;
     }
@@ -5646,13 +5535,9 @@ body {
         padding-right: 32px;
     }
 
-    /* index */
-
     .eazi__start {
-
         grid-template-columns: 1fr;
     }
-
 
     .act__zal {
         grid-template-columns: 1fr;
@@ -5666,18 +5551,6 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .summer__school-heading-title {
-        font-size: 42px;
-    }
-
-    .summer__about-heading-title {
-        font-size: 42px;
-    }
-
-    .section__video-text-title {
-        font-size: 42px;
-    }
-
     .footer__grid-layout {
         display: grid;
         grid-template-columns: repeat(2, auto);
@@ -5687,13 +5560,30 @@ body {
         flex-direction: column;
         align-items: flex-start;
     }
-
 }
 
 @media screen and (max-width: 991px) and (min-width: 768px) {
 
+    .navbar__logo {
+        margin-left: 16px;
+    }
+
+    .section {
+        padding: 44px 20px;
+    }
+
+    .navbar__menu {
+        padding: 44px 20px;
+    }
+
     .header__heading-title .header__heading-title--separation {
         margin-bottom: 0px;
+    }
+
+    .header__heading-title {
+        font-size: 36px;
+        line-height: 54px;
+        margin-bottom: 14px;
     }
 
     .header__heading-vertical-separator {
@@ -5707,22 +5597,6 @@ body {
     .header__heading-separation {
         justify-content: center;
     }
-
-    /*     .header__navbar {
-        padding-left: 24px;
-    } */
-    .navbar__logo {
-        margin-left: 16px;
-    }
-
-    .section {
-        padding: 44px 20px;
-    }
-
-    .navbar__menu {
-        padding: 44px 20px;
-    }
-
 
     .faculty__item {
         grid-template-columns: repeat(1, 1fr);
@@ -5737,10 +5611,7 @@ body {
         order: -1;
     }
 
-
-
     .profession__list {
-
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -5751,17 +5622,16 @@ body {
     }
 
     .footer__copyright-text {
-
         font-size: 18px;
     }
 
     .latest-news__detail-date {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 22px;
     }
 
     .latest-news__detail-title {
-        font-size: 22px;
+        font-size: 18px;
         margin-bottom: 22px;
 
     }
@@ -5771,58 +5641,12 @@ body {
         line-height: 28px;
     }
 
-    .section__recent-posts-heading-title {
-        font-family: "Playfair Display", serif;
-        font-size: 42px;
-        font-weight: 500;
-    }
-
     .recent-post__time {
-        font-size: 22px;
-    }
-
-    .recent-post__description {
         font-size: 18px;
-        line-height: 28px;
     }
 
-
-
-    .section__latest-news-title {
-        font-size: 42px;
-    }
-
-    .section__profession-heading-title {
-        font-size: 42px;
-    }
-
-    .faq__question-text {
-        font-size: 34px;
-        line-height: 52px;
-    }
-
-    .faq__answer-text {
-        font-size: 22px;
-        line-height: 48px;
-    }
-
-    .section__partners-heading-title {
-        font-size: 42px;
-        line-height: 52px;
-    }
-
-    .profession__detail-title {
-        font-size: 38px;
-        margin-bottom: 22px;
-    }
-
-    .section__recent-posts-heading-link {
-        font-size: 22px;
-        line-height: 28px;
-    }
-
-    .profession__detail-link-name {
-        font-size: 22px;
+    .news__heading-item {
+        grid-template-columns: 1fr;
     }
 
     .section {
@@ -5833,16 +5657,6 @@ body {
         padding: 44px 20px;
     }
 
-    .header__heading-title {
-        font-size: 32px;
-        line-height: 52px;
-    }
-
-    .header__heading-description {
-        font-size: 22px;
-        line-height: 42px;
-    }
-
     .login__section {
         grid-template-columns: 1fr;
     }
@@ -5850,7 +5664,6 @@ body {
     .login__illustration {
         display: none;
     }
-
 
     .teacher__list {
         grid-template-columns: repeat(3, 1fr);
@@ -5866,7 +5679,6 @@ body {
     }
 
     .quick-links__heading {
-
         margin-bottom: 16px;
         margin-right: unset;
     }
@@ -5882,29 +5694,11 @@ body {
         flex-direction: column;
         overflow: auto;
         padding-right: 32px;
-        /* index */
-    }
-
-    .faculty__title {
-        font-size: 42px;
-        line-height: 52px;
     }
 
     .eazi__start {
-
         grid-template-columns: 1fr;
     }
-
-
-
-
-
-
-
-
-
-
-
 
     .footer__section-logo {
         width: 168px;
@@ -5931,7 +5725,6 @@ body {
     }
 
     .footer__nav-link {
-
         font-size: 18px;
     }
 
@@ -5940,9 +5733,6 @@ body {
         align-items: flex-start;
     }
 
-    /*     .header__navbar {
-        padding-left: 24px;
-    } */
     .act__zal {
         grid-template-columns: 1fr;
     }
@@ -5952,19 +5742,23 @@ body {
     }
 
     .student__committee-main {
-
         grid-template-columns: 1fr;
-
     }
-
-
 }
 
 @media screen and (max-width: 767px) and (min-width: 576px) {
 
-    /*     .header__navbar {
-        padding-left: 12px;
-    } */
+    .navbar__logo {
+        margin-left: 16px;
+    }
+
+    .section {
+        padding: 44px 20px;
+    }
+
+    .navbar__menu {
+        padding: 44px 20px;
+    }
 
     .header__heading-title .header__heading-title--separation {
         margin-bottom: 0px;
@@ -5980,18 +5774,6 @@ body {
 
     .header__heading-separation {
         justify-content: center;
-    }
-
-    .navbar__logo {
-        margin-left: 16px;
-    }
-
-    .section {
-        padding: 44px 20px;
-    }
-
-    .navbar__menu {
-        padding: 44px 20px;
     }
 
     .faculty-teacher__list {
@@ -6029,12 +5811,9 @@ body {
         order: -1;
     }
 
-
     .profession__list {
-
         grid-template-columns: repeat(1, 1fr);
     }
-
 
     .latest-news__detail-date {
         font-size: 20px;
@@ -6042,9 +5821,8 @@ body {
     }
 
     .latest-news__detail-title {
-        font-size: 22px;
+        font-size: 18px;
         margin-bottom: 22px;
-
     }
 
     .latest-news__detail-description {
@@ -6052,14 +5830,8 @@ body {
         line-height: 28px;
     }
 
-    .section__recent-posts-heading-title {
-        font-family: "Playfair Display", serif;
-        font-size: 42px;
-        font-weight: 500;
-    }
-
     .recent-post__time {
-        font-size: 22px;
+        font-size: 16px;
     }
 
     .recent-post__description {
@@ -6068,53 +5840,30 @@ body {
     }
 
     .recent-post__link {
-        text-decoration: none;
-        font-size: 22px;
-        font-weight: 500;
+        font-size: 18px;
         line-height: 32px;
         margin-bottom: 22px;
     }
 
     .profession__list {
-
         grid-template-columns: repeat(1, 1fr);
     }
 
     .section__latest-news-title {
-        font-size: 42px;
+        font-size: 32px;
     }
 
     .section__profession-heading-title {
-        font-size: 42px;
+        font-size: 32px;
     }
 
-    .faq__question-text {
-        font-size: 34px;
-        line-height: 52px;
-    }
-
-    .faq__answer-text {
-        font-size: 22px;
-        line-height: 48px;
-    }
-
-    .section__partners-heading-title {
-        font-size: 42px;
-        line-height: 52px;
-    }
-
-    .profession__detail-title {
-        font-size: 38px;
-        margin-bottom: 22px;
+    .news__heading-item {
+        grid-template-columns: 1fr;
     }
 
     .section__recent-posts-heading-link {
         font-size: 22px;
         line-height: 28px;
-    }
-
-    .profession__detail-link-name {
-        font-size: 22px;
     }
 
     .section {
@@ -6143,7 +5892,6 @@ body {
         display: none;
     }
 
-
     .teacher__list {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -6158,7 +5906,6 @@ body {
     }
 
     .quick-links__heading {
-
         margin-bottom: 16px;
         margin-right: unset;
     }
@@ -6174,40 +5921,16 @@ body {
         flex-direction: column;
         overflow: auto;
         padding-right: 32px;
-        /* index */
     }
 
     .faculty__title {
         font-size: 38px;
         line-height: 52px;
-
     }
-
 
     .eazi__start {
-
         grid-template-columns: 1fr;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     .footer__grid-layout {
         grid-template-columns: repeat(1, auto);
@@ -6219,12 +5942,6 @@ body {
         align-items: flex-start;
     }
 
-    /* .footer__section-logo {
-        width: 148px;
-        height: 40px;
-
-    } */
-
     .footer__section-icon-link>i {
         font-size: 14px;
     }
@@ -6234,7 +5951,6 @@ body {
     }
 
     .footer__nav-link {
-
         font-size: 18px;
     }
 
@@ -6245,14 +5961,8 @@ body {
 
     .footer__nav-section-title {
         font-size: 18px;
-
     }
 
-
-
-    /*     .header__navbar {
-        padding-left: 24px;
-    } */
     .act__zal {
         grid-template-columns: 1fr;
     }
@@ -6262,14 +5972,33 @@ body {
     }
 
     .student__committee-main {
-
         grid-template-columns: 1fr;
-
     }
 
+    .digital__development-section {
+        grid-template-columns: 1fr;
+        gap: 42px;
+    }
+
+    .digital__development-icon {
+        margin-top: unset;
+    }
 }
 
 @media screen and (max-width: 575px) {
+
+    .navbar__logo {
+        margin-left: 8px;
+    }
+
+
+    .section {
+        padding: 16px 8px;
+    }
+
+    .navbar__menu {
+        padding: 16px 8px;
+    }
 
     .header__heading-title .header__heading-title--separation {
         margin-bottom: 0px;
@@ -6285,38 +6014,6 @@ body {
 
     .header__heading-separation {
         justify-content: center;
-    }
-
-    /*     .header__navbar {
-        padding-left: 12px;
-    } */
-
-    /* .section{
-
-        padding: 24px 40px;
-        /* padding: 48px 80px;
-        padding:24px 40px;
-        padding:12px 20px;
-        padding 6px 10px */
-    /* }  */
-    /* .navbar__menu{
-        margia-left
-    }
-	/*  */
-
-
-
-    .navbar__logo {
-        margin-left: 8px;
-    }
-
-
-    .section {
-        padding: 16px 8px;
-    }
-
-    .navbar__menu {
-        padding: 16px 8px;
     }
 
     .menu__container {
@@ -6371,13 +6068,11 @@ body {
         line-height: 48px;
     }
 
-    /* NEW */
     .header__heading-description {
         font-size: 16px;
         line-height: 32px;
     }
 
-    /* NEW */
     .section__blank-title {
         font-size: 32px;
     }
@@ -6393,29 +6088,14 @@ body {
         line-height: 24px;
     }
 
-    /* asoiu_summer_school_about_us */
-    .summer__school-heading-title {
-        font-size: 32px;
-        line-height: 42px;
-    }
-
     .summer__about-heading {
-
         margin-bottom: 42px;
     }
 
-    .summer__about-heading-title {
-        font-size: 32px;
-    }
-
-    /* asoiu_summer_school_about_us */
     .navbar__logo {
         width: 136px;
         height: auto;
     }
-
-
-
 
     .navbar__search {
         border: none;
@@ -6447,7 +6127,6 @@ body {
         margin: 0px;
     }
 
-
     .recent-post__item {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -6455,10 +6134,6 @@ body {
     .profession__list {
         grid-template-columns: repeat(1, 1fr);
     }
-
-
-
-    /* FOOTER */
 
     .footer__grid-layout {
         grid-template-columns: repeat(1, 1fr);
@@ -6477,12 +6152,8 @@ body {
     }
 
     .footer__section-about-text {
-
         margin-bottom: 8px;
     }
-
-
-
 
     .partner__logo {
         justify-content: center;
@@ -6505,20 +6176,10 @@ body {
         order: -1;
     }
 
-    /*     .teacher__modal-control {
-        position: sticky;
-    } */
-
     .teacher__modal-detail {
         padding: 0px 0px 12px 12px;
     }
 
-
-
-
-
-
-    /* login */
     .login__section {
         grid-template-columns: 1fr;
     }
@@ -6531,36 +6192,19 @@ body {
         padding: 32px 12px;
     }
 
-    /* login */
-
-    /* Faculty */
     .faculty__item {
         grid-template-columns: repeat(1, 1fr);
         gap: 32px;
-
     }
 
     .faculty__link>i {
         margin-right: 0px;
     }
 
-    /* Faculty */
-
-    .faculty__title {
-        font-size: 28px;
-        line-height: 40px;
-    }
-
-
-
-    /* center_for_digital_development_and_innovation */
-
     .digital__development-transition {
         overflow-x: auto;
         padding-bottom: 18px;
     }
-
-    /* ????? */
 
     .digital__development-transition::-webkit-scrollbar {
         height: 4px;
@@ -6577,9 +6221,6 @@ body {
         border-radius: 8px;
     }
 
-    /* center_for_digital_development_and_innovation */
-
-    /* center_for_digital_development_and_innovation */
     .digital__development-icon {
         margin: 0px;
     }
@@ -6589,44 +6230,10 @@ body {
         gap: 42px;
     }
 
-    /* center_for_digital_development_and_innovation */
     .digital__development-structure {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    /* center_for_digital_development_and_innovation */
-
-
-    /* department_of_international_relations */
-    .digital__development-heading-title {
-        font-size: 22px;
-    }
-
-    .digital__development-main-title {
-        font-size: 18px;
-        line-height: 24px;
-    }
-
-    /* department_of_international_relations */
-
-
-    /* LIBRARY */
-    .digital__development-heading-title {
-        font-size: 32px;
-        line-height: 42px;
-    }
-
-    .digital__development-library-information-item-link {
-        font-size: 18px;
-        line-height: 38px;
-    }
-
-
-
-    /* LIBRARY */
-
-
-    /* CLUBS */
     .club__detail {
         width: 100%;
     }
@@ -6635,15 +6242,6 @@ body {
         height: auto;
     }
 
-    .club__link-name {
-        font-size: 18px;
-    }
-
-    /* CLUBS */
-
-
-
-    /* conferences */
     .conference__list {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -6652,37 +6250,11 @@ body {
         height: auto;
     }
 
-    .conference__detail-description {
-        font-size: 14px;
-        line-height: 24px;
-    }
-
-    /* conferences */
-
-
-
-
-
-
-
-
-    /* EAZI_START */
     .eazi__start {
         grid-template-columns: 1fr;
         gap: 14px;
     }
 
-
-
-
-
-
-
-    /* EAZI_START */
-
-
-
-    /* ERROR_404 */
     .section__error-404-title {
         font-size: 24px;
         line-height: 24px;
@@ -6698,10 +6270,7 @@ body {
         line-height: 13px;
     }
 
-    /* ERROR_404 */
-
     .section__register-page {
-
         grid-template-columns: 1fr;
     }
 
@@ -6709,8 +6278,6 @@ body {
         order: -1;
     }
 
-
-    /* ERROR_402 */
     .section__error-422-title {
         font-size: 24px;
         line-height: 24px;
@@ -6726,10 +6293,6 @@ body {
         line-height: 13px;
     }
 
-    /* ERROR_402 */
-
-
-    /* faculties */
     .faculty__poster-img {
         height: 256px;
     }
@@ -6738,17 +6301,6 @@ body {
         height: 256px;
     }
 
-    .faculty__title {
-        font-size: 28px;
-    }
-
-    .faculty__description {
-        font-size: 14px;
-    }
-
-    .faculty__link-name {
-        font-size: 18px;
-    }
     .faculty-specialization__list {
         grid-template-columns: repeat(1, 1fr);
         gap: 18px;
@@ -6822,14 +6374,6 @@ body {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-
-    .summer__school-academic-heading-title {
-        font-size: 32px;
-        line-height: 42px;
-    }
-
- 
-
 
     .student__committee-main {
         grid-template-columns: 1fr;
