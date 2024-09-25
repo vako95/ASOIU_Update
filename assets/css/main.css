@@ -4990,6 +4990,7 @@ margin-bottom: 32px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    margin-bottom: 40px;
 }
 
 .digital__development-stucture-items {
@@ -5663,6 +5664,9 @@ margin-bottom: 32px;
     .header__heading-separation {
         justify-content: center;
     }
+    .section__grid {
+        grid-template-columns: 1fr;
+    }
 
     .faculty__item {
         grid-template-columns: repeat(1, 1fr);
@@ -5841,7 +5845,12 @@ margin-bottom: 32px;
     .header__heading-separation {
         justify-content: center;
     }
-
+    .section__grid {
+        grid-template-columns: 1fr;
+    }
+    .digital__development-article {
+        margin-bottom: 40px;
+    }
     .faculty-teacher__list {
 
         grid-template-columns: repeat(1, 1fr);
@@ -6137,6 +6146,13 @@ margin-bottom: 32px;
     .header__heading-description {
         font-size: 16px;
         line-height: 32px;
+    }
+
+    .section__grid {
+        grid-template-columns: 1fr;
+    }
+    .digital__development-article {
+        margin-bottom: 40px;
     }
 
     .section__blank-title {
